@@ -22,3 +22,6 @@ scaled_data = scaler.fit_transform(df)
 model = kmeans(n_clusters=3, n_init=10).fit_predict(scaled_data)
 #visualisation of the clusters
 fig_cluster = px.scatter(data_frame=scaled_data,)
+#displaying the clusters
+st.subheader("Displaying the cluster")
+st.plotly_chart(fig_cluster)#for showing plotly figures, we have the function plotly chart and pass our fig_cluster as the parameter

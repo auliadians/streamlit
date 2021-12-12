@@ -21,4 +21,4 @@ scaled_data = scaler.fit_transform(df)
 #creating and fitting the model
 model = kmeans(n_clusters=3, n_init=10).fit_predict(scaled_data)
 #visualisation of the clusters
-fig_cluster = px.scatter(data_frame=scaled_data, color=model.labels_)
+fig_cluster = px.scatter(data_frame=scaled_data,)

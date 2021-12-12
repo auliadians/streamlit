@@ -10,11 +10,12 @@ import numpy as np
 st.header("Report on clustering")
 
 data = pd.read_csv("https://raw.github.com/auliadians/streamlit/master/pelanggar_akb.csv")
-df = data.drop("Jalan", axis=1, inplace=True)
+
 #display the dataframe
 st.subheader("The processed dataframe")
 st.dataframe(data)
 #dataframe() function gives an interactive table
-scaler = StandardScaler()
-scaler.fit(df)
-train_scaled = scaler.transform(df)
+#df = data.drop("Jalan", axis=1, inplace=True)
+#scaler = StandardScaler()
+#scaler.fit(df)
+#train_scaled = scaler.transform(df)

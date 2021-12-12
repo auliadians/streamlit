@@ -15,7 +15,7 @@ data = pd.read_csv("https://raw.github.com/auliadians/streamlit/master/pelanggar
 st.subheader("The processed dataframe")
 st.dataframe(data)
 #dataframe() function gives an interactive table
-df = data.drop("Jalan", axis=1, inplace=True)
+df = data.drop(data.columns[0], axis = 1)
 st.dataframe(df)
 scaler = StandardScaler()
 scaled_data = scaler.fit_transform(df)

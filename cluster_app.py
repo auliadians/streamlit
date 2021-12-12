@@ -16,6 +16,5 @@ st.subheader("The processed dataframe")
 st.dataframe(data)
 #dataframe() function gives an interactive table
 df = data.drop("Jalan", axis=1, inplace=True)
-#scaler = StandardScaler()
-#scaler.fit(df)
-#train_scaled = scaler.transform(df)
+scaler = StandardScaler()
+scaled_data = scaler.fit_transform(df)

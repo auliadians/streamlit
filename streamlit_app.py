@@ -9,7 +9,7 @@ import numpy as np
 
 st.header("Report on clustering")
 
-data = pd.read_csv("https://raw.githubusercontent.com/auliadians/streamlit/main/test.csv", index_col='Unnamed: 0',nrows=1000)# Unnamed: 0 is the index column present in the dataset, if its not explicitly mentioned this way, it will also get displayed
+data = pd.read_csv("https://raw.githubusercontent.com/auliadians/streamlit/master/test.csv", index_col='Unnamed: 0',nrows=1000)# Unnamed: 0 is the index column present in the dataset, if its not explicitly mentioned this way, it will also get displayed
 #nrows=1000 is for demo purposes, since the dataset has a large number of rows
 #preprocessing the dataset
 data = pd.get_dummies(data, columns = ['Gender', 'Customer Type', 'Type of Travel', 'Class','satisfaction'])

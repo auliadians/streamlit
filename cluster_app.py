@@ -25,3 +25,4 @@ fig_cluster = px.scatter(data_frame=scaled_data,)
 #displaying the clusters
 st.subheader("Displaying the cluster")
 st.plotly_chart(fig_cluster)#for showing plotly figures, we have the function plotly chart and pass our fig_cluster as the parameter
+number_of_clusters = st.slider("number of clusters to display", min_value=4, max_value=48, step=2, value=10)

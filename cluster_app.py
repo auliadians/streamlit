@@ -10,7 +10,7 @@ import numpy as np
 st.header("Report on clustering")
 
 data = pd.read_csv("https://raw.github.com/auliadians/streamlit/master/pelanggar_akb.csv")
-
+data.drop("Jalan")
 #display the dataframe
 st.subheader("The processed dataframe")
 st.dataframe(data)

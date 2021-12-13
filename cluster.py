@@ -47,7 +47,7 @@ for i in range(1,7): # 1 to 10
 
 #to make a curve that can be passed to a variable, use subplot
 fig, ax = plt.subplots(figsize=(11,8.5))
-plt.plot(range(1,11), wss, 'bx-')
+plt.plot(range(1,7), wss, 'bx-')
 plt.xlabel('Number of clusters $k$')
 plt.ylabel('Inertia')
 plt.title('The Elbow method showing the optimal $k$')

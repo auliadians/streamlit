@@ -19,7 +19,7 @@ df = data.drop(data.columns[0], axis = 1)
 scaler = StandardScaler()
 scaled_data = scaler.fit_transform(df)
 
-model = kmeans(n_clusters=2, n_init=10).fit(scaled_data)
+model = kmeans(n_clusters=3, n_init=10).fit(scaled_data)
 
 # initialising the PCA
 pca=PCA(n_components=2) #we're calling the PCA method and we're specifying that we want two components.

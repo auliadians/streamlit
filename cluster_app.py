@@ -20,7 +20,7 @@ df = data.drop(data.columns[0], axis = 1)
 scaler = StandardScaler()
 scaled_data = scaler.fit_transform(df)
 
-number_of_clusters = st.slider("number of clusters to display", min_value=2, max_value=6, value=3)
+#number_of_clusters = st.slider("number of clusters to display", min_value=2, max_value=6, value=3)
 
 # initialising the PCA
 pca=PCA(n_components=2) #we're calling the PCA method and we're specifying that we want two components.

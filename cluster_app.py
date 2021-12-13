@@ -25,6 +25,19 @@ number_of_clusters = st.slider("number of clusters to display", min_value=2, max
 #st.write("This Silhuette Score for ", number_of_clusters  )
 #creating and fitting the model
 model = kmeans(n_clusters=number_of_clusters, n_init=10).fit_predict(scaled_data)
+
+chart = alt.Chart(model).mark_circle(size=60).encode(
+        color=alt.Color('Jalan', scale=alt.Scale(scheme='category20')) ,
+        tooltip=['Jalan','Pelanggar Roda 3']
+    ).configure_axis(
+        grid=False
+    ).configure_view(
+        strokeWidth=0
+    ).properties(
+        width=700,
+        height=500,
+    ).interactive()
+
 #visualisation of the clusters
 fig_cluster = px.scatter(data_frame=scaled_data,)
 #displaying the clusters

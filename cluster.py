@@ -41,7 +41,7 @@ wss = []
 # loop to iterate over the no of clusters and calculate the wss
 for i in range(1,7): # 1 to 10
   #kmeans
-  fitx = kmeans(n_clusters=i, init='kmeans++', n_init=5, random_state=42).fit(scaled_data)
+  fitx = kmeans(n_clusters=i, init='random', n_init=5, random_state=42).fit(scaled_data)
   # appending the value
   wss.append(fitx.inertia_)
 

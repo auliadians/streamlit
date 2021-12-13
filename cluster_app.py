@@ -24,7 +24,7 @@ source_df = number_of_clusters
 source = source_df
 st.write("This Silhuette Score for ", number_of_clusters  )
 #creating and fitting the model
-model = kmeans(n_clusters=2, n_init=10).fit_predict(scaled_data)
+model = kmeans(n_clusters=number_of_clusters, n_init=10).fit_predict(scaled_data)
 #visualisation of the clusters
 fig_cluster = px.scatter(data_frame=scaled_data,)
 #displaying the clusters

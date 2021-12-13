@@ -6,6 +6,7 @@ from sklearn.decomposition import PCA
 import plotly.express as px
 import matplotlib.pyplot as plt
 import numpy as np
+import altair as alt
 
 st.header("Report on clustering")
 

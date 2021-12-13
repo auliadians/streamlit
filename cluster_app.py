@@ -28,6 +28,12 @@ principalComponents = pca.fit_transform(scaled_data)#we're fitting the pca metho
 #making a dataframe of the principal components
 principalDf = pd.DataFrame(data = principalComponents, columns=['pca1', 'pca2'])
 
+#visualisation of the clusters
+fig_cluster = px.scatter(data_frame=principalDf, x='principal_component_1', y='principal_component_2', color=model.labels_)
+
+#displaying the clusters
+st.subheader("Displaying the cluster")
+st.plotly_chart(fig_cluster)
 
 
 

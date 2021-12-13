@@ -7,7 +7,7 @@ import plotly.express as px
 import matplotlib.pyplot as plt
 import numpy as np
 
-st.header("Report on clustering")
+st.header("Analisis Clustering Pelanggaran Adaptasi Kebiasaan Baru Menggunakan Algoritma K-Means Pada Data Satpol PP Kabupaten Cirebon")
 
 data = pd.read_csv("https://raw.github.com/auliadians/streamlit/master/pelanggar_akb.csv")
 
@@ -33,6 +33,7 @@ fig_cluster = px.scatter(data_frame=principalDf, x='pca1', y='pca2',  color=mode
 
 #displaying the clusters
 st.subheader("Displaying the cluster")
+
 st.plotly_chart(fig_cluster)
 
 # list to store the within sum of squared error(inertia) for the different clusters given the respective cluster size

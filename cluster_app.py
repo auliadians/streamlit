@@ -40,5 +40,5 @@ principalDf = pd.DataFrame(data = principalComponents, columns=['principal_compo
 #visualisation of the clusters
 #fig_cluster = px.scatter(data_frame=scaled_data)
 #displaying the clusters
-st.subheader("Displaying the cluster")
+#st.subheader("Displaying the cluster")
 #st.plotly_chart(fig_cluster)#for showing plotly figures, we have the function plotly chart and pass our fig_cluster as the parameter

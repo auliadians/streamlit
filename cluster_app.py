@@ -21,6 +21,8 @@ scaler = StandardScaler()
 scaled_data = scaler.fit_transform(df)
 
 number_of_clusters = st.slider("number of clusters to display", min_value=2, max_value=6, value=2)
+model = kmeans(n_clusters=number_of_clusters, n_init=10).fit_predict(scaled_data)
+
 # initialising the PCA
 pca=PCA(n_components=2) #we're calling the PCA method and we're specifying that we want two components.
 #fitting the PCA

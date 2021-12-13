@@ -29,7 +29,7 @@ principalComponents = pca.fit_transform(scaled_data)#we're fitting the pca metho
 principalDf = pd.DataFrame(data = principalComponents, columns=['pca1', 'pca2'])
 
 #visualisation of the clusters
-fig_cluster = px.scatter(data_frame=principalDf, x='pca1', y='pca2')
+fig_cluster = px.scatter(data_frame=principalDf, x='pca1', y='pca2',  color=model.labels_)
 
 #displaying the clusters
 st.subheader("Displaying the cluster")

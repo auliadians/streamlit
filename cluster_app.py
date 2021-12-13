@@ -20,7 +20,7 @@ df = data.drop(data.columns[0], axis = 1)
 scaler = StandardScaler()
 scaled_data = scaler.fit_transform(df)
 
-#number_of_clusters = st.slider("number of clusters to display", min_value=2, max_value=6, value=3)
+number_of_clusters = st.slider("number of clusters to display", min_value=2, max_value=6, value=3)
 
 # initialising the PCA
 pca=PCA(n_components=2) #we're calling the PCA method and we're specifying that we want two components.
@@ -34,7 +34,7 @@ principalDf = pd.DataFrame(data = principalComponents, columns=['principal_compo
 #source = source_df
 #st.write("This Silhuette Score for ", number_of_clusters  )
 #creating and fitting the model
-model = kmeans(n_clusters=number_of_clusters, n_init=10).fit_predict(scaled_data)
+#model = kmeans(n_clusters=number_of_clusters, n_init=10).fit_predict(scaled_data)
 
 
 #visualisation of the clusters

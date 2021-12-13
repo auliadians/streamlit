@@ -39,7 +39,7 @@ chart = alt.Chart(model).mark_circle(size=60).encode(
         height=500,
     ).interactive()
 
- st.altair_chart(chart)
+st.altair_chart(chart)
 
 #visualisation of the clusters
 fig_cluster = px.scatter(data_frame=scaled_data,)
